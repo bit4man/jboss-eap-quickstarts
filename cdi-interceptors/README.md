@@ -15,11 +15,11 @@ Interceptors can be applied to any business methods or beans, simply by adding a
 This example demonstrates 2 interceptors: `AuditInterceptor` and `LoggingInterceptor`
 
 The quickstart defines the `@Audit` and `@Logging` interceptor binding types. The `AuditInterceptor` and `LoggingInterceptor` classes are annotated with the binding type annotation and contain a method annotated `@AroundInvoke`. If the interceptor is enabled, this method will be called when the intercepted methods are invoked. In the `ItemServiceBean` bean, notice the `create()`and `getList()` methods are annotated with the `@Audit` and `@Logging` binding types. This means the `aroundInvoke()` method in the `AuditInterceptor` and `LoggingInterceptor` classes will be called when the `ItemServiceBean` bean's `create()` and `getList()` methods are called, but only if that interceptor is enabled.
-To enable an interceptor, you must add the interceptor class to the WEB-INF/beans.xml descriptor file.
+To enable an interceptor, you must add the interceptor class to the `WEB-INF/beans.xml` descriptor file.
 
 _Note: This quickstart uses the H2 database included with Red Hat JBoss Enterprise Application Platform 7. It is a lightweight, relational example datasource that is used for examples only. It is not robust or scalable, is not supported, and should NOT be used in a production environment!_
   
-_Note: This quickstart uses a `*-ds.xml` datasource configuration file for convenience and ease of database configuration. These files are deprecated in JBoss EAP and should not be used in a production environment. Instead, you should configure the datasource using the Management CLI or Management Console. Datasource configuration is documented in the [Configuration Guide](https://access.redhat.com/documentation/en/jboss-enterprise-application-platform/) for Red Hat JBoss Enterprise Application Platform._
+_Note: This quickstart uses a `*-ds.xml` datasource configuration file for convenience and ease of database configuration. These files are deprecated in JBoss EAP and should not be used in a production environment. Instead, you should configure the datasource using the Management CLI or Management Console. Datasource configuration is documented in the [Configuration Guide](https://access.redhat.com/documentation/en/red-hat-jboss-enterprise-application-platform/) for Red Hat JBoss Enterprise Application Platform._
 
 System requirements
 -------------------
@@ -62,13 +62,13 @@ Access the application
 
 The application will be running at the following URL: <http://localhost:8080/jboss-cdi-interceptors>.
 
-You can now comment out classes in the WEB-INF/beans.xml file to disable one or both of the interceptors and view the results.
+You can now comment out classes in the `WEB-INF/beans.xml` file to disable one or both of the interceptors and view the results.
 
 * Comment the `<class>org.jboss.as.quickstarts.cdi.interceptor.AuditInterceptor</class>` and you will no longer see the audit history on the browser page.
 * Comment the `<class>org.jboss.as.quickstarts.cdi.interceptor.LoggingInterceptor</class>` and you will no longer see the log messages in the server log.
 
 In this quickstart, in order to switch back to the default implementation, 
-comment the `interceptors` block in the WEB-INF/beans.xml file and redeploy the quickstart.
+comment the `interceptors` block in the `WEB-INF/beans.xml` file and redeploy the quickstart.
 
 
 Server Log: Expected warnings and errors
@@ -100,6 +100,8 @@ This quickstart provides Arquillian tests. By default, these tests are configure
 3. Type the following command to run the test goal with the following profile activated:
 
         mvn clean test -Parq-wildfly-remote 
+
+You can also let Arquillian manage the JBoss EAP server by using the `arq-wildfly-managed` profile. For more information about how to run the Arquillian tests, see [Run the Arquillian Tests](https://github.com/jboss-developer/jboss-developer-shared-resources/blob/master/guides/RUN_ARQUILLIAN_TESTS.md#run-the-arquillian-tests).
 
 
 Run the Quickstart in Red Hat JBoss Developer Studio or Eclipse

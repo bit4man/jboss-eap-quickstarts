@@ -19,7 +19,7 @@ A JAX-RS resource provides access to some operations that are executed asynchron
 
 _Note: This quickstart uses the H2 database included with Red Hat JBoss Enterprise Application Platform 7. It is a lightweight, relational example datasource that is used for examples only. It is not robust or scalable, is not supported, and should NOT be used in a production environment!_
 
-_Note: This quickstart uses a `*-ds.xml` datasource configuration file for convenience and ease of database configuration. These files are deprecated in JBoss EAP and should not be used in a production environment. Instead, you should configure the datasource using the Management CLI or Management Console. Datasource configuration is documented in the [Configuration Guide](https://access.redhat.com/documentation/en/jboss-enterprise-application-platform/) for Red Hat JBoss Enterprise Application Platform._
+_Note: This quickstart uses a `*-ds.xml` datasource configuration file for convenience and ease of database configuration. These files are deprecated in JBoss EAP and should not be used in a production environment. Instead, you should configure the datasource using the Management CLI or Management Console. Datasource configuration is documented in the [Configuration Guide](https://access.redhat.com/documentation/en/red-hat-jboss-enterprise-application-platform/) for Red Hat JBoss Enterprise Application Platform._
 
 System requirements
 -------------------
@@ -67,7 +67,7 @@ This quickstart provides tests that shows how the asynchronous tasks are execute
 Run tests from JBDS
 -----------------------
 
-To be able to run the tests from JBDS, first set the active Maven profile in project properties to be either 'rest-client'.
+To run the tests in JBoss Developer Studio, first set the active Maven profile in the project properties to `rest-test`.
 
 To run the tests, right click on the project or individual classes and select Run As --> JUnit Test in the context menu.
 
