@@ -29,7 +29,7 @@ echo === DEBUG MAVEN ===
 cat $HOME/.m2/settings.xml
 echo === DEBUG ENDS ====
 
-# sleep 1000000
+sleep 1000000
 
 manage_incremental_build
 
