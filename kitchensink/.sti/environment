@@ -1,3 +1,0 @@
-HTTP_PROXY_HOST=http://proxy.rhdemo.net
-HTTP_PROXY_PORT=3128
-HTTPS_PROXY_HOST=http://proxy.rhdemo.net
